@@ -86,6 +86,7 @@ systemctl start redis
 systemctl status redis
 ```
 如图即成功开启redis服务
+
 ![capture_20250426152750115](https://github.com/user-attachments/assets/b96d0b88-300a-4036-b026-dcbbd1c8263d)
 
 从靶机centos7上进入redis客户端服务
@@ -93,6 +94,7 @@ systemctl status redis
 redis-cli
 ```
 如图即成功进入
+
 ![capture_20250426153839832](https://github.com/user-attachments/assets/7c3596b0-6ef9-4503-af5c-44fb55011a5d)
 
 
